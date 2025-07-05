@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-animation"></div>
+
+  <!-- Player Setup Screen -->
+  <div id="setup-screen">
+    <h1>Tic Tac Toe</h1>
+    <label>Player 1 Name: <input type="text" id="player1" placeholder="Player X"></label><br>
+    <label id="player2-label">Player 2 Name: <input type="text" id="player2" placeholder="Player O"></label><br>
+    <label>Select Mode:</label><br>
+    <button onclick="startGame('single')">Single Player</button>
+    <button onclick="startGame('multi')">Two Player</button>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="hidden">
+    <h1>Tic Tac Toe</h1>
+
+    <div id="scoreboard">
+      <span id="scoreX">Player X: 0</span>
+      <span id="scoreO">Player O: 0</span>
+    </div>
+
+    <div id="game">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+
+    <!-- 🎉 WINNER POPUP (placed here above status line) -->
+    <div id="popup" class="hidden">
+      <p id="popup-message"></p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+
+    <p id="status">Player X's Turn</p>
+
+    <div class="buttons">
+      <button id="newGame">New Game</button>
+      <button id="reset">Restart Game</button>
+      <button onclick="window.open('https://music.youtube.com/watch?v=5qap5aO4i9A', '_blank')">🎧 Play Music</button>
+    </div>
+  </div>
+
+  <!-- Music -->
+  <div class="music-box">
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1&loop=1&playlist=5qap5aO4i9A" frameborder="0" allow="autoplay"></iframe>
+    <p class="music-label">🎵 Lofi Beats</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+/* General Page Layout */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f0f8ff;
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #03045E;
+  z-index: 1;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Setup Screen */
+#setup-screen {
+  margin-top: 50px;
+  z-index: 1;
+  position: relative;
+}
+
+#setup-screen input {
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #0077B6;
+  border-radius: 5px;
+}
+
+#setup-screen button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1rem;
+  background-color: #00B4D8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#setup-screen button:hover {
+  background-color: #0077B6;
+}
+
+/* Scoreboard */
+#scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #023E8A;
+}
+
+/* Game Grid */
+#game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
+  z-index: 1;
+  position: relative;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #CAF0F8;
+  border: 2px solid #0077B6;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cell:hover {
+  background-color: #ADE8F4;
+}
+
+/* Status Display */
+#status {
+  font-size: 1.2rem;
+  color: #023E8A;
+  margin-top: 10px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 15px;
+  z-index: 1;
+  position: relative;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #00B4D8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+button:hover {
+  background-color: #0077B6;
+}
+
+/* 🎉 Popup Positioned Above Game */
+#popup {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 3px solid #0077B6;
+  padding: 25px 40px;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  color: #03045E;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+#popup.hidden {
+  display: none;
+}
+
+#popup button {
+  margin-top: 15px;
+  background-color: #00B4D8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#popup button:hover {
+  background-color: #0077B6;
+}
+
+/* 😊 Smiley Background Animation */
+.bg-animation::before {
+  content: '😊 😊 😊 😊 😊 😊 😊 😊 😊 😊 😊 😊 😊 😊 😊';
+  position: fixed;
+  top: -10%;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  font-size: 3rem;
+  color: rgba(255, 223, 0, 0.1);
+  animation: float 60s linear infinite;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-50%, 100%); }
+}
+
+/* 🎧 Music Box */
+.music-box {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #0077B6;
+}
+
+.music-label {
+  margin-top: 5px;
+}
